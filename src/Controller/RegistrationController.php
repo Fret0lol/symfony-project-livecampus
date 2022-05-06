@@ -30,6 +30,14 @@ class RegistrationController extends AbstractController
                 )
             );
 
+            // Rôles
+            if (str_ends_with($user->getEmail(), '@insider.fr')) {
+                $user->setRoles(['ROLE_INSIDER']);
+            } else if (str_ends_with($user->getEmail(), '@collaborator.fr')) {
+                $user->setRoles(['ROLE_COLLABORATOR']);
+            } else if (str_ends_with($user->getEmail(), '@external.fr')) {
+                $user->setRoles(['ROLE_EXTERNAL']);
+            }
             $entityManager->persist($user);
             $entityManager->flush();
             // do anything else you need here, like send an email
