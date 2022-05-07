@@ -1,0 +1,110 @@
+$main: #32474b;
+$secondary: #286664;
+$grey1: #FAF9FA;
+$grey2: #F0F0F0;
+$grey3: #E3E3E3;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: $main;
+    min-width: 100vh;
+    background-color: $grey2;
+
+    a:last-of-type{
+        margin-left: auto;
+    }
+}
+
+.login, .register{
+    display: flex;
+    flex-direction: column;
+    margin: 20vh auto 0 auto;
+    align-items: center;
+    gap: 30px;
+
+    label{
+        display: none;
+    }
+}
+
+h1{
+    font-size: 40px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+    input{
+        font-family: 'Roboto', sans-serif;
+        margin-top: 10px;
+        background-color: $grey3;
+    }
+
+    button{
+        margin-top: 30px;
+        background-color: $secondary;
+        color: white;
+        text-transform: uppercase;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .error-message{
+        text-align: center;
+        padding-top: 10px;
+        color: red;
+    }
+
+    button, input{
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 18px;
+        width: 20vw;
+        border: none;
+    }
+}
+
+header{
+    background-color: $secondary;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20vw 0 20vw;
+    color: white;
+    font-size: 30px;
+}
+
+.container-list{
+
+    li:first-of-type{
+        background-color: $secondary;
+        color: white;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    li{
+        padding: 20px;
+
+        &:not(:first-of-type):hover{
+            cursor: pointer;
+            box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    padding: 0;
+    background-color: white;
+    display: block;
+    width: 60vw;
+    margin: 100px auto 0px auto;
+    list-style-type: none;
+}
