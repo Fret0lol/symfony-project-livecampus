@@ -7,16 +7,17 @@ body {
   font-family: "Roboto", sans-serif;
   color: #32474b;
   min-width: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 20vh auto 0 auto;
+  align-items: center;
   background-color: #F0F0F0;
-}
-body a:last-of-type {
-  margin-left: auto;
 }
 
 .login, .register {
   display: flex;
   flex-direction: column;
-  margin: 20vh auto 0 auto;
+  margin: 0 auto 0 auto;
   align-items: center;
   gap: 30px;
 }
@@ -24,8 +25,16 @@ body a:last-of-type {
   display: none;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 auto;
+  align-items: center;
+}
+
 h1 {
   font-size: 40px;
+  margin-bottom: 20px;
 }
 
 form {
@@ -69,24 +78,19 @@ header {
   font-size: 30px;
 }
 
-.container-list {
+table {
   padding: 0;
   background-color: white;
   display: block;
-  width: 60vw;
-  margin: 100px auto 0px auto;
+  margin: 40px auto 20px auto;
   list-style-type: none;
 }
-.container-list li:first-of-type {
+table thead > tr th {
   background-color: #286664;
   color: white;
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.container-list li {
+table tbody > tr > td {
   padding: 20px;
-}
-.container-list li:not(:first-of-type):hover {
-  cursor: pointer;
-  box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=main.css.map */

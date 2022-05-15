@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Board;
 use App\Form\BoardType;
 use App\Repository\BoardRepository;
